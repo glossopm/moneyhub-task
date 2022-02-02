@@ -81,3 +81,14 @@ Admin - localhost:8083
 - Refactor/Cleanup the generate-report-json.js
 - Explore streams
 - Add tests
+- Migrate to ES6?
+
+### Walkthrough/Explaination
+- I updated the packages with `npm audit fix` because there were vunerabilities
+- Added some eslint rules to shut my IDE up
+- I replaced `request` with `node-fetch` as request is deprecated. node-fetch is what I'm using on my current project, just looks a lot cleaner.
+- I tried `json-2-csv` first, had some issues and frustrations so switched to `json2csv` package. It seems well used (i.e. 7700 weekly downloads) and lightweight with only 3 dependencies.
+- Structured code with `utils` folder for utility functions, with kebab-case for file name as this is best practice.
+- Sticking point was getting the CSV output from the `console.log(res.body)` in the investment API `/investments/export`, spent a good amount of time searching and fiddling before I found a solution. Not sure the solution is perfect but it worked for now.
+I did miss typescript a bit, it really does help having the types so I would definitely be an advocate for migrating your codebase in the future
+- Spent just shy on 2 hours on the solution all in all, completed over lunch and while waiting for things to deploy at work
