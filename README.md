@@ -75,3 +75,9 @@ Financial Companies - localhost:8082
 
 Admin - localhost:8083
 - `/investments/:id` get an investment record by id
+- `/report/generate` generate a csv report for all investment and send to investment api, expects no body
+
+### Improvements
+- Refactor/Cleanup the generate-report-json.js
+- Explore streams
+- Add tests
