@@ -6,7 +6,7 @@ const R = require("ramda")
 
 const app = express()
 
-app.use(bodyParser.json({limit: "10mb"}))
+app.use("/investments/export", bodyParser.text({ type: "*/*" }));
 
 app.get("/investments", (req, res) => {
   res.send(investments)
